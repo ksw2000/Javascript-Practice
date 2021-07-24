@@ -1,4 +1,4 @@
-function Person(name, age){
+function Person(name, age) {
     this.name = name;
     this.age = age;
     console.log("Person constructor()");
@@ -10,7 +10,7 @@ Person.prototype.methodB = () => {
     console.log("Person.methodB()");
 }
 
-function Teacher(name, age, subject){
+function Teacher(name, age, subject) {
     Person.call(this, name, age);       // STEP1: call Person's constructor
     this.subject = subject;
     this.methodA();

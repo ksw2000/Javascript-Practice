@@ -1,7 +1,7 @@
-function Person(name, year){
+function Person(name, year) {
     this.name = name;
     this.year = year;
-    this.log = function(){
+    this.log = function () {
         console.log(this.name, this.year);
     }
 }
@@ -16,12 +16,12 @@ console.log(sueka.log === maikichi.log);        // false
 // 我們可以把這個 function 抽出來，變成所有 Person 共享的方法
 // 類似 java class 的 static function
 
-function Person2(name, year){
+function Person2(name, year) {
     this.name = name;
     this.year = year;
 }
 
-Person2.prototype.log = function(){
+Person2.prototype.log = function () {
     console.log(this.name, this.year);
 }
 
