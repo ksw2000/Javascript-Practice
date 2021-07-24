@@ -1,10 +1,10 @@
-function delayPrint(){
+function delayPrint() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log("After 1000ms");
-            if(Math.random() < .5){
+            if (Math.random() < .5) {
                 resolve('complete');
-            }else{
+            } else {
                 reject('fail');
             }
         }, 1000);
@@ -16,7 +16,7 @@ function delayPrint(){
 (async () => {
     await delayPrint().then((success) => {
         console.log("resolve", success);
-    }).catch((e)=>{
+    }).catch((e) => {
         console.log("reject", e);
     });
     // 用 await 會進行等待
